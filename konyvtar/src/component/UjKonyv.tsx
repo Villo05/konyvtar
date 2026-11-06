@@ -31,17 +31,17 @@ export default function UjKonyv() {
         <h2>Új könyv hozzá adása</h2>
         <form onSubmit={mentes}>
             <div className="form-mezo">
-            <label htmlFor="cim">cím</label>
+            <label htmlFor="cim">Cím </label>
             <input type="text" value={cim} id="cim" name="cim" onChange={(e)=>setCim(e.target.value)} required/>
             </div>
 
             <div className="form-mezo">
-            <label htmlFor="szerzo">Szerző</label>
+            <label htmlFor="szerzo">Szerző </label>
             <input type="text" value={szerzo} id="szerzo" name="szerzo" onChange={(e)=>setSzerzo(e.target.value)} required/>
             </div>
 
             <div className="form-mezo">
-            <label htmlFor="ar">Ár</label>
+            <label htmlFor="ar">Ár </label>
             <input type="number" value={ar} id="ar" name="ar" onChange={(e)=>setAr(Number(e.target.value))} required/>
             </div>
 
