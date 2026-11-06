@@ -1,0 +1,9 @@
+.tabla{
+    background-color: #d8c8c8;
+    color: rgb(0, 0, 0);
+    border: solid 1px rgb(0, 0, 0);
+}
+
+table tr:nth-child(even) {
+    background-color: #e6d8d8;
+}

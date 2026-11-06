@@ -8,18 +8,20 @@ export default function KonyvTabla(){
         <div className="tabla">
         <table>
             <thead>
-                <th>Id</th>
-                <th>Cím</th>
-                <th>Szerző</th>
-                <th>Ár</th>
-                <th>DB</th>
+                <tr>
+                    <th>Id</th>
+                    <th>Cím</th>
+                    <th>Szerző</th>
+                    <th>Ár</th>
+                    <th>DB</th>
+                </tr>
             </thead>
             <tbody>
-                {konyvLista.map((konyv, i) => {
+                {konyvLista.map((konyv) => {
                     return(
                         <KonyvSor
                             konyv={konyv}
-                            key={i}
+                            key={konyv.id}
                         />
                     )
                 })}

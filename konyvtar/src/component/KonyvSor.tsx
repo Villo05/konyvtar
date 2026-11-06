@@ -1,16 +1,19 @@
+import type { KonyvTipusok } from "../adatok"
 import { useTablaContext } from "../context/TablaContext"
 
-
-export default function KonyvSor() {
-    const {konyvLista, torles} = useTablaContext()
+interface KonyvSorProps{
+    konyv: KonyvTipusok
+}
+export default function KonyvSor({konyv}:KonyvSorProps) {
+    const {torles} = useTablaContext()
     return(
             <tr>
-                <td>{konyvLista.id}</td>
-                <td>{konyvLista.cim}</td>
-                <td>{konyvLista.szerzo}</td>
-                <td>{konyvLista.ar} Ft</td>
-                <td>{konyvLista.db} db</td>
-                <td><button type="button" className="torles" onClick={torles}>❌</button></td>
+                <td>{konyv.id}</td>
+                <td>{konyv.cim}</td>
+                <td>{konyv.szerzo}</td>
+                <td>{konyv.ar} Ft</td>
+                <td>{konyv.db} db</td>
+                <td><button type="button" className="torles" onClick={()=>torles(konyv.id)}>❌</button></td>
             </tr>
     )
 }

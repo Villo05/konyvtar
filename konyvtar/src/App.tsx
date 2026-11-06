@@ -1,13 +1,19 @@
 
 import './App.css'
 import KonyvTabla from './component/KonyvTabla'
-import { TablaProvider } from './context/TablaContext'
+import UjKonyv from './component/UjKonyv'
 
 function App() {
     return(
-        <TablaProvider>
-          <KonyvTabla />
-        </TablaProvider>
+      <main>
+        <header>Könyv áruház</header>
+        <p>admin</p>
+            <KonyvTabla />
+            <UjKonyv />
+            <footer>minden jog fenn tartva</footer>
+      </main>
+      
+      
     )
 }
 
