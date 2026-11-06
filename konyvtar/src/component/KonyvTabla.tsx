@@ -3,11 +3,12 @@ import KonyvSor from "./KonyvSor"
 import "./KonyvTabla.css"
 
 interface KonyvTablaProps{
-    elem: KonyvTipusok,
+    elem: KonyvTipusok[],
 }
 
 export default function KonyvTabla({elem}:KonyvTablaProps){
-    <div className="tabla">
+    return(
+        <div className="tabla">
         <table>
             <thead>
                 <th>Id</th>
@@ -15,7 +16,6 @@ export default function KonyvTabla({elem}:KonyvTablaProps){
                 <th>Szerző</th>
                 <th>Ár</th>
                 <th>DB</th>
-                <th></th>
             </thead>
             <tbody>
                 {elem.map((konyv) => (
@@ -27,4 +27,5 @@ export default function KonyvTabla({elem}:KonyvTablaProps){
             </tbody>
         </table>
     </div>
+    )
 }
