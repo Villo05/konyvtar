@@ -32,22 +32,22 @@ export default function UjKonyv() {
         <form onSubmit={mentes}>
             <div className="form-mezo">
             <label htmlFor="cim">cím</label>
-            <input type="text" value={cim} id="cim" name="cim" onChange={(e)=>setCim(e.target.value)} />
+            <input type="text" value={cim} id="cim" name="cim" onChange={(e)=>setCim(e.target.value)} required/>
             </div>
 
             <div className="form-mezo">
             <label htmlFor="szerzo">Szerző</label>
-            <input type="text" value={szerzo} id="szerzo" name="szerzo" onChange={(e)=>setSzerzo(e.target.value)} />
+            <input type="text" value={szerzo} id="szerzo" name="szerzo" onChange={(e)=>setSzerzo(e.target.value)} required/>
             </div>
 
             <div className="form-mezo">
             <label htmlFor="ar">Ár</label>
-            <input type="number" value={ar} id="ar" name="ar" onChange={(e)=>setAr(Number(e.target.value))} />
+            <input type="number" value={ar} id="ar" name="ar" onChange={(e)=>setAr(Number(e.target.value))} required/>
             </div>
 
             <div className="form-mezo">
             <label htmlFor="db"> Db </label>
-            <input type="number" value={db} id="db" name="db" onChange={(e)=>setDb(Number(e.target.value))} />
+            <input type="number" value={db} id="db" name="db" onChange={(e)=>setDb(Number(e.target.value))} required/>
             </div>
 
             <button type="submit" >Hozzáadás</button>
