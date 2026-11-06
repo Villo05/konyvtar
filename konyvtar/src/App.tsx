@@ -1,15 +1,13 @@
 
-import { useState } from 'react'
 import './App.css'
 import KonyvTabla from './component/KonyvTabla'
-import { KONYVEK } from './adatok'
+import { TablaProvider } from './context/TablaContext'
 
 function App() {
-const [k, setK]=useState(KONYVEK)
     return(
-        <KonyvTabla 
-            elem={k}
-        />
+        <TablaProvider>
+          <KonyvTabla />
+        </TablaProvider>
     )
 }
 

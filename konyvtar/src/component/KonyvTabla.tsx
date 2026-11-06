@@ -1,12 +1,9 @@
-import type { KonyvTipusok } from "../adatok"
+import { useTablaContext } from "../context/TablaContext"
 import KonyvSor from "./KonyvSor"
 import "./KonyvTabla.css"
 
-interface KonyvTablaProps{
-    elem: KonyvTipusok[],
-}
-
-export default function KonyvTabla({elem}:KonyvTablaProps){
+export default function KonyvTabla(){
+    const {konyvLista}=useTablaContext()
     return(
         <div className="tabla">
         <table>
@@ -18,12 +15,14 @@ export default function KonyvTabla({elem}:KonyvTablaProps){
                 <th>DB</th>
             </thead>
             <tbody>
-                {elem.map((konyv) => (
-                    <KonyvSor
-                        key={konyv.id} 
-                        elem={konyv}
-                    />
-                ))}
+                {konyvLista.map((konyv, i) => {
+                    return(
+                        <KonyvSor
+                            konyv={konyv}
+                            key={i}
+                        />
+                    )
+                })}
             </tbody>
         </table>
     </div>
